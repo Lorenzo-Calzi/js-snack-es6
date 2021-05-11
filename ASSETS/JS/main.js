@@ -5,7 +5,7 @@
 //    peso
 // 3. Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
-/* var bikes = [
+var bikes = [
     {
         nome: 'Cannondale SuperSix Evo',
         peso: 7.3
@@ -36,7 +36,7 @@ console.log(
     `
     Numero Minore: ${Math.min (...min)}
     `
-); */
+);
 
 
 /* SNACK 2: */
@@ -53,7 +53,7 @@ function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
-const Teams = [
+const teams = [
     {
         nome: 'Milan',
         puntiFatti: random(1, 30),
@@ -76,12 +76,16 @@ const Teams = [
     },
 ]
 
-for(var i = 0; i < Teams.length; i++) {
-    var element = Teams[i];
+const newArray = []
+for(let i = 0; i < teams.length; i++) {
+    const element = teams[i];
     console.log(element);
+
+    const {nome, falliSubiti} = element;
+    newArray.push({nome, falliSubiti})
 }
 
-const [nome, puntiFatti] = Teams;
-console.log(nome, puntiFatti, );
+console.log(newArray);
+
 
     
