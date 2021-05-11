@@ -5,7 +5,7 @@
 //    peso
 // 3. Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
-var bikes = [
+/* var bikes = [
     {
         nome: 'Cannondale SuperSix Evo',
         peso: 7.3
@@ -24,20 +24,7 @@ var bikes = [
     },
 ]
 
-/* var min = [];
-
-for(var i = 0; i < bikes.length; i++) {
-
-    var element = bikes[i];
-    console.log(element.peso);
-    min.push(element.peso);
-}
-
-console.log(min)
-console.log('Numero Minore: ' + Math.min (...min)); */
-
 var min = [];
-
 for(var i = 0; i < bikes.length; i++) {
     var element = bikes[i];
     const {peso} = element;
@@ -49,9 +36,52 @@ console.log(
     `
     Numero Minore: ${Math.min (...min)}
     `
-);
+); */
 
 
+/* SNACK 2: */
+// 1. Creare un array di oggetti di squadre di calcio. 
+// 2. Ogni squadra avrà diverse proprietà:
+//    nome
+//    punti fatti
+//    falli subiti
+// 4. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+//    Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+// 5. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
+function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+const Teams = [
+    {
+        nome: 'Milan',
+        puntiFatti: random(1, 30),
+        falliSubiti: random(1,50)
+    },
+    {
+        nome: 'Juventus',
+        puntiFatti: random(1, 30),
+        falliSubiti: random(1,50)
+    },
+    {
+        nome: 'Inter',
+        puntiFatti: random(1, 30),
+        falliSubiti: random(1,50)
+    },
+    {
+        nome: 'Atalanta',
+        puntiFatti: random(1, 30),
+        falliSubiti: random(1,50)
+    },
+]
+
+for(var i = 0; i < Teams.length; i++) {
+    var element = Teams[i];
+    console.log(element);
+}
+
+const [nome, puntiFatti] = Teams;
+console.log(nome, puntiFatti, );
 
     
