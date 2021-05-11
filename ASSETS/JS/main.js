@@ -19,14 +19,26 @@ var bikes = [
         peso: 6.8
     },
     {
-        nome: 'Cannondale SystemSix',
-        peso: 7.6
+        nome: 'Trek Madone SLR 9',
+        peso: 7.9
+    },
+    {
+        nome: 'Canyon Aeroad CFR2',
+        peso: 7.2
+    },
+    {
+        nome: 'Wilier Zero SLR Disc Dura-Ace',
+        peso: 6.9
+    },
+    {
+        nome: 'Trek Emonda SLR 9 Disc',
+        peso: 6.5
     },
 ]
 
-var min = [];
-for(var i = 0; i < bikes.length; i++) {
-    var element = bikes[i];
+const min = [];
+for(let i = 0; i < bikes.length; i++) {
+    const element = bikes[i];
     const {peso} = element;
     min.push(peso);
 }
@@ -34,7 +46,7 @@ for(var i = 0; i < bikes.length; i++) {
 console.log(min);
 console.log(
     `
-    Numero Minore: ${Math.min (...min)}
+    La bici più leggera pesa: ${Math.min (...min)} Kg
     `
 );
 
@@ -56,23 +68,103 @@ function random(min, max) {
 const teams = [
     {
         nome: 'Milan',
-        puntiFatti: random(1, 30),
-        falliSubiti: random(1,50)
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
     },
     {
         nome: 'Juventus',
-        puntiFatti: random(1, 30),
-        falliSubiti: random(1,50)
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
     },
     {
         nome: 'Inter',
-        puntiFatti: random(1, 30),
-        falliSubiti: random(1,50)
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
     },
     {
         nome: 'Atalanta',
-        puntiFatti: random(1, 30),
-        falliSubiti: random(1,50)
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Crotone',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Parma',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Spezia',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Benevento',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Fiorentina',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Lazio',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Roma',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Torino',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Bologna',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },  
+    {
+        nome: 'Genoa',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Sampdoria',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Udinese',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Cagliari',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Napoli',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Sassuolo',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
+    },
+    {
+        nome: 'Verona',
+        puntiFatti: random(1, 100),
+        falliSubiti: random(1,200)
     },
 ]
 
