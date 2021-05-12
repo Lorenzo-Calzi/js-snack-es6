@@ -204,14 +204,17 @@ const newArray = [];
 
 function position(array, number1, number2) {
     array.forEach((valore, i) => {
-        if(i + 1 > number1 && i < number2 -1) {
+        if(i + 1 > number1 && i < number2 - 1) {
             newArray.push(valore)
-            console.log(newArray);
-            return newArray;
+            console.log('Nuovo Array: ' + newArray);
         }
     })
 }
+if(b - a == 1){
+    alert('vuoto')
+}
 
-var prova = position(array, a, b);
-console.log(prova);
+var functions = position(array, a, b);
+console.log(newArray);
+
 
