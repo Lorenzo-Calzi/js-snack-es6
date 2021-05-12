@@ -5,7 +5,7 @@
 //    peso
 // 3. Stampare a schermo la bici con peso minore utilizzando destructuring e template literal
 
-var bikes = [
+/* var bikes = [
     {
         nome: 'Cannondale SuperSix Evo',
         peso: 7.3
@@ -48,7 +48,7 @@ console.log(
     `
     La bici più leggera pesa: ${Math.min (...min)} Kg
     `
-);
+); */
 
 
 /* SNACK 2: */
@@ -60,7 +60,7 @@ console.log(
 // 4. Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
 //    Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
 // 5. Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
-
+/* 
 function random(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -177,7 +177,41 @@ for(let i = 0; i < teams.length; i++) {
     newArray.push({nome, falliSubiti})
 }
 
-console.log(newArray);
+console.log(newArray); */
 
 
-    
+
+/* SNACK 3: */
+// 1. Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
+// 2. La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
+
+
+var array = ['Uno', '2', 3, '4', '5', 'Sei', '7', 8, '9', '10'];
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+
+var b = getRndInteger(2, array.length)
+console.log('b: ' + b);
+
+var a = getRndInteger(1, b - 1)
+console.log('a: ' + a);
+
+
+/* FOR EACH */
+const newArray = [];
+
+function position(array, number1, number2) {
+    array.forEach((valore, i) => {
+        if(i + 1 > number1 && i < number2 -1) {
+            newArray.push(valore)
+            console.log(newArray);
+            return newArray;
+        }
+    })
+}
+
+var prova = position(array, a, b);
+console.log(prova);
+
